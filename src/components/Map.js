@@ -2,10 +2,9 @@ import MapPiece from "./MapPiece";
 import DestinationPiece from "./DestinationPiece";
 import PlayerPiece from "./PlayerPiece.js"
 import { StyledMap } from '../styles';
-import { useState } from "react";
 
 const Map = () => {
-
+ 
   const h = 8;
   const w = 8;
 
@@ -98,6 +97,7 @@ const Map = () => {
       grid[row].push(componentToRender);
     }
   }
+
 
   return (
     <StyledMap>
