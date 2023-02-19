@@ -1,14 +1,11 @@
 import { StyledMapPiece } from "../styles";
 
-const MapPiece = ({ x, y }) => {
-  // x: 0,
-  // y: 0,
-  // name: null
-  return (
-    <StyledMapPiece>
-      <button>destination ({x}, {y})</button>
-    </StyledMapPiece>
-  );
+const MapPiece = ({x, y, btnPress }) => {
+    return (
+        <StyledMapPiece>
+            <button onClick={e => btnPress(e, x, y)}>???</button>
+        </StyledMapPiece>
+    )
 };
 
 export default MapPiece;
