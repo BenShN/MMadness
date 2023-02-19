@@ -21,7 +21,7 @@ https://github.com/BenShN/MMadness
 - Ben Shires Nakamura / bks5, bks5@sfu.ca
 -
 - Shinyoung You / austyn.you@gmail.com
-- Honey Lee / honeyrun5@gmail.com
+- Honey Lee / haneylee99@gmail.com
 
 
 ## Interest in presenting 
