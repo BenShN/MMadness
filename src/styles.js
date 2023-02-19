@@ -32,7 +32,7 @@ export const StyledMapPiece = styled.div`
     background-color: transparent;
     border: none;
     &:hover {
-      background-color: lightblue;
+      background-color: rgba(165,55,150,0.5);
     }
   }
 `;
