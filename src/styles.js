@@ -23,3 +23,18 @@ export const StyledMapPiece = styled.div`
     }
   }
 `;
+
+
+export const StyledBlinkingText = styled.div.attrs(props=>({
+  blinkDuration: props.blink
+}))`
+  .blinking-text {
+    animation: blink ${props => props.blinkDuration}s infinite;
+  }
+
+  @keyframes blink {
+    5% {
+      opacity: 0;
+    }
+  }
+`;
