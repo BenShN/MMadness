@@ -2,10 +2,12 @@ import MapPiece from "./MapPiece";
 import DestinationPiece from "./DestinationPiece";
 import PlayerPiece from "./PlayerPiece.js"
 import { StyledMap } from '../styles';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const Map = ({setPosition}) => {
+
+
  
   const h = 8;
   const w = 8;
@@ -28,6 +30,14 @@ const Map = ({setPosition}) => {
       y: initialDestPosY
     }
   ]); 
+
+  useEffect(()=>{
+    setPosition([pieces[1].x, pieces[1].y]);
+    console.log([pieces[1].x, pieces[1].y]);
+  }, [pieces])
+
+  // setPosition([initialDestPosX, initialDestPosY]);
+
 
   const grid = [];
 
@@ -82,6 +92,8 @@ const Map = ({setPosition}) => {
         newPieces[pieceIndex].y] = getRandomCoordinates(oldX, oldY);
       return newPieces
     });
+
+
     setDestinationsReach(numDestinationsReach + 1);
     movePlayer(null, oldX, oldY);
   }

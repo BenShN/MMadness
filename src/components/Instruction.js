@@ -6,10 +6,9 @@ function Instruction({blink, setBlink, position}) {
 
     let alpha = ['A','B','C','D','E','F','G','H'];
     let morseStrY = morse[alpha[position[1]]];
-    console.log(morseStrY);
-    let morseStrX = alpha[position[0]]+1;
-    console.log(morseStrX);
-
+    console.log("morseY",morseStrY);
+    let morseStrX = morse[position[0]+1];
+    console.log("morseX",morseStrX);
 
     // const letterA = ".-";
     // const letter4 = "....-";
@@ -21,18 +20,18 @@ function Instruction({blink, setBlink, position}) {
         for (let i = 0; i < array.length; i++) {
       console.log(array[i]);
         if (array[i] == "-") {
-            setBlink(<StyledBlinking3s key="3"></StyledBlinking3s>);
-            await delay(2000);
+            setBlink(<StyledBlinking3s key={i} className={i}></StyledBlinking3s>);
+            await delay(2100);
         } else if (array[i] == ".") {
-            setBlink(<StyledBlinking1s key="1"></StyledBlinking1s>);
-            await delay(1000);
+            setBlink(<StyledBlinking1s key={i} className={i}></StyledBlinking1s>);
+            await delay(1100);
         }
         }
     };
 
     const secondLetter = async () => {
-        letter(morseStrY);
-        await delay(4000);
+        await letter(morseStrY);
+        await delay(3000);
         letter(morseStrX);
     };
 

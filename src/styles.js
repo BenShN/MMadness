@@ -74,6 +74,7 @@ export const StyledBlinking1s = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   /* z-index: 2; */
+  opacity: 0;
 
   @keyframes blink {
     0% {
@@ -92,7 +93,7 @@ export const StyledBlinking1s = styled.div`
 `;
 
 export const StyledBlinking3s = styled.div`
-    animation: blink 2s;
+    animation: blink 3s;
   background-image: url(${spark});
   width: 200px;
   height: 200px;
