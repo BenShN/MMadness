@@ -22,7 +22,7 @@ export const StyledMapPiece = styled.div`
   width: 12.5%;
   aspect-ratio: 1/1;
   button {
-    color: yellow;
+    color: white;
     padding: 0;
     width: 100%;
     height: 100%;
