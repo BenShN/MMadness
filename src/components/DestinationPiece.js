@@ -1,9 +1,9 @@
 import { StyledMapPiece } from "../styles";
 
-const DestinationPiece = ({x, y, btnPress }) => {
+const DestinationPiece = ({ btnPress }) => {
     return (
         <StyledMapPiece>
-            <button onClick={e => btnPress(e, x, y)}><h1>Destination</h1></button>
+            <button onClick={e => btnPress(e)}><h1>Destination</h1></button>
         </StyledMapPiece>
     )
 };

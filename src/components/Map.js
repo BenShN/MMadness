@@ -11,18 +11,20 @@ const Map = () => {
 
   //This state array stores objects that represent the pieces on the map
   //When the board is being rendered, the current rendee's coordinates gets checked against this array if a piece is suppose to be on the board
+  const [initialPlayerPosX, initialPlayerPosY] = getRandomCoordinates()
+  const [initialDestPosX, initialDestPosY] = getRandomCoordinates(initialPlayerPosX, initialPlayerPosY);
   const [pieces, setPieces] = useState([
     {
       component: <PlayerPiece key={"player"} />,
       name: "player",
-      x: 0,
-      y: 0
+      x: initialPlayerPosX,
+      y: initialPlayerPosY
     },
     {
-      component: <DestinationPiece key={"destination"} btnpress={reachDestination}/>,
+      component: <DestinationPiece key={"destination"} btnPress={reachDestination}/>,
       name: "destination",
-      x: getRandomCoordinates(),
-      y: Math.trunc(Math.random() * h)
+      x: initialDestPosX,
+      y: initialDestPosY
     }
   ]); 
 
@@ -30,7 +32,7 @@ const Map = () => {
 
   //Passed as a callback fn to the empty(???) tiles so that the player moves to the tile's coordinates
   function movePlayer(e, x, y) {
-    e.preventDefault();
+    if(e) e.preventDefault();
 
     const pieceIndex = pieces.findIndex(piece => {
       return piece.name === "player";
@@ -62,7 +64,7 @@ const Map = () => {
   }
 
   let numDestinationsToWin = 3;
-  let numDestinationsReach = useState(0);
+  let [numDestinationsReach, setDestinationsReach] = useState(0);
   function reachDestination(e) {
     e.preventDefault();
 
@@ -70,15 +72,17 @@ const Map = () => {
       return piece.name === "destination";
     })
 
-    oldDestX = pieces[pieceIndex].x
-    oldDestY = pieces[pieceIndex].y
+    const oldX = pieces[pieceIndex].x;
+    const oldY = pieces[pieceIndex].y;
 
     setPieces(prevPieces => {
       const newPieces = [...prevPieces];
-      newPieces[pieceIndex].x = x;
-      newPieces[pieceIndex].y = y;
+      [newPieces[pieceIndex].x,
+        newPieces[pieceIndex].y] = getRandomCoordinates(oldX, oldY);
       return newPieces
     });
+    setDestinationsReach(numDestinationsReach + 1);
+    movePlayer(null, oldX, oldY);
   }
 
   for(let row = 0; row < w; row++) {
