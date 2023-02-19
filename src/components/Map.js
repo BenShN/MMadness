@@ -1,5 +1,4 @@
 import MapPiece from "./MapPiece";
-import PlayerPiece from "./PlayerPiece.js"
 import { StyledMap } from '../styles';
 
 const Map = () => {
@@ -13,10 +12,6 @@ const Map = () => {
     ))}
     </StyledMap>
   )
-}
-
-function renderPiece(pieces) {
-
 }
 
 export default Map;
