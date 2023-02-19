@@ -7,7 +7,8 @@ export const StyledMap = styled.div`
   border-style: content-box;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100vh;
+  height: 100vh;
   aspect-ratio: 1/1;
   background-repeat: no-repeat;
   background-size: cover;
