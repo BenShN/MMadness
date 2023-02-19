@@ -12,24 +12,24 @@ const Map = () => {
     {
       component: <PlayerPiece />,
       name: "player",
-      x: 0,
+      x: 1,
       y: 0
     }
   ]); 
 
   const grid = [];
 
-  for(let col = 0; col < w; col++) {
+  for(let row = 0; row < w; row++) {
     grid.push([]);
-    for(let row = 0; row < h; row++) {
+    for(let col = 0; col < h; col++) {
       let componentToRender = <MapPiece key={col * w + row} /> ;
 
       pieces.forEach(piece => {
-        if(piece.x == row && piece.y == col) {
+        if(piece.x == col && piece.y == row) {
             componentToRender = piece.component;
         }
       });
-      grid[col].push(componentToRender);
+      grid[row].push(componentToRender);
     }
   }
 
