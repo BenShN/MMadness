@@ -17,6 +17,10 @@ A man named Morris have lost in the snow mountain. He found a watch tower that s
 
 https://github.com/BenShN/MMadness
 
+## web deployment
+
+https://mountainmadness2023-mourse.web.app/
+
 
 ## Group members names, SFU Computing ID & email
 - Ben Shires Nakamura / bks5, bks5@sfu.ca
