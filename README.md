@@ -13,13 +13,21 @@ Mountain Morris
 Game involving deciphering morse code in order to return safely from the mountain. 
 A man named Morris have lost in the snow mountain. He found a watch tower that send a signal to the rescue point so he had to decypher the code and find have to go to the right place to  survive.
 
+## web deployment
+
+https://mountainmadness2023-mourse.web.app/
+
+
+## video
+
+https://user-images.githubusercontent.com/87500500/219965980-2cac7c70-e415-4d3b-81ec-21a4d46cc9c1.mp4
+
+
+
 ## github link
 
 https://github.com/BenShN/MMadness
 
-## web deployment
-
-https://mountainmadness2023-mourse.web.app/
 
 
 ## Group members names, SFU Computing ID & email
