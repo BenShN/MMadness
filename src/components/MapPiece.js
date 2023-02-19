@@ -1,12 +1,12 @@
 import { StyledMapPiece } from "../styles";
 
-const MapPiece = ({ index, h, w }) => {
+const MapPiece = ({ x, y }) => {
   // x: 0,
   // y: 0,
   // name: null
   return (
     <StyledMapPiece>
-      <button>destination{index} {h}{w}</button>
+      <button>destination ({x}, {y})</button>
     </StyledMapPiece>
   );
 };
