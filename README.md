@@ -1,6 +1,6 @@
 # MMadness
 
-Mountain Madness SFU 2023 hackathon
+Mountain-Madness-2023 SFU hackathon
 
 Theme: Lost in Translation
 
