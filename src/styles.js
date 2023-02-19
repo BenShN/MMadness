@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import spark from './ImageSrc/spark.png'
-import light_bg from './ImageSrc/light_bg.png'
-import MorseCode from './ImageSrc/MorseCode.png'
+import spark from "./ImageSrc/spark.png";
+import light_bg from "./ImageSrc/light_bg.png";
+import MorseCode from "./ImageSrc/MorseCode.png";
 
 export const StyledMap = styled.div`
-border-style: content-box;
+  border-style: content-box;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -15,7 +15,6 @@ border-style: content-box;
 `;
 
 export const StyledMapPiece = styled.div`
-
   box-sizing: border-box;
 
   border-style: solid;
@@ -37,10 +36,9 @@ export const StyledMapPiece = styled.div`
   }
 `;
 
-
 // export const StyledBlinkingText = styled.div.attrs(props=>({
 //   blinkDuration: props.blink
-// }))` 
+// }))`
 //   animation: blink 1s;
 //   background-color: rgba(255, 0, 0, 0.5);
 //   background-image: url(${spark});
@@ -81,10 +79,10 @@ export const StyledBlinking1s = styled.div`
     0% {
       opacity: 0;
     }
-    10% {
+    25% {
       opacity: 1;
     }
-    90% {
+    75% {
       opacity: 1;
     }
     100% {
@@ -93,8 +91,37 @@ export const StyledBlinking1s = styled.div`
   }
 `;
 
-export const StyledBlinking3s = styled(StyledBlinking1s)`
-  animation: blink 2s;
+export const StyledBlinking3s = styled.div`
+    animation: blink 2s;
+  background-image: url(${spark});
+  width: 200px;
+  height: 200px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  position: absolute;
+  top: 14.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 2; */
+  opacity: 0;
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 `;
 
 export const StyledInstruction = styled.div`

@@ -5,7 +5,7 @@ import { StyledMap } from '../styles';
 import { useState } from "react";
 
 
-const Map = () => {
+const Map = ({setPosition}) => {
  
   const h = 8;
   const w = 8;

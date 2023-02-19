@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { StyledBlinking1s, StyledBlinking3s } from "../styles.js";
 
-const BlinkingText = () => {
+const BlinkingText = ({blink, setBlink}) => {
   const letterA = ".-";
   const letter4 = "....-";
   // const [morse, setMorse] = useState(array.split(""));
-  const [blink, setBlink] = useState(null);
+  // const [blink, setBlink] = useState(null);
 
-  useEffect(()=>{
-    secondLetter();
-  }, [])
+  // useEffect(()=>{
+  //   secondLetter();
+  // }, [])
 
   const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
@@ -27,8 +27,8 @@ const BlinkingText = () => {
 
   const secondLetter = async () => {
     letter(letterA);
-    await delay(4000);
-    letter(letter4);
+    await delay(10000);
+    // letter(letter4); 
   };
 
   return (
