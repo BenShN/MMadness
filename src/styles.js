@@ -17,10 +17,10 @@ export const StyledMap = styled.div`
 
 export const StyledMapPiece = styled.div`
   box-sizing: border-box;
-
   border-style: solid;
   border-color: yellow;
   border-width: 1px;
+  border: none;
   display: inline-block;
   width: 12.5%;
   aspect-ratio: 1/1;
@@ -127,19 +127,46 @@ export const StyledBlinking3s = styled.div`
 `;
 
 export const StyledInstruction = styled.div`
+  position: relative;
   background-image: url(${light_bg});
   height: 400px;
-  width: 550px;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 130%;
+  button {
+    background-color: lightyellow;
+    border: none;
+    border-radius: 25px;
+    padding: 2%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  img {
+    width: 50px;
+  }
 `;
 
 export const StyledMorseCode = styled.div`
   background-image: url(${MorseCode});
   height: 310px;
-  width: 550px;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+`;
+
+export const StyledGameOver = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(139, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 72px;
+  color: rgb(255, 255, 255);
 `;

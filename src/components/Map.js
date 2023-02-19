@@ -5,10 +5,7 @@ import { StyledMap } from '../styles';
 import { useState, useEffect } from "react";
 
 
-const Map = ({setPosition}) => {
-
-
- 
+const Map = ({setPosition, setCounter, counter}) => { 
   const h = 8;
   const w = 8;
 
@@ -43,6 +40,7 @@ const Map = ({setPosition}) => {
 
   //Passed as a callback fn to the empty(???) tiles so that the player moves to the tile's coordinates
   function movePlayer(e, x, y) {
+    if (!(x == pieces[0].x && y == pieces[0].y)) setCounter(counter=>counter-1);
     if(e) e.preventDefault();
 
     const pieceIndex = pieces.findIndex(piece => {
@@ -96,6 +94,7 @@ const Map = ({setPosition}) => {
 
     setDestinationsReach(numDestinationsReach + 1);
     movePlayer(null, oldX, oldY);
+    setCounter(counter=>counter+1)
   }
 
   for(let row = 0; row < w; row++) {

@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import {StyledInstruction, StyledMorseCode, StyledBlinking1s, StyledBlinking3s} from '../styles';
 import morse from "../data/morse";
+import heart from "../ImageSrc/heart.png"
 
-function Instruction({blink, setBlink, position}) {
-
+function Instruction({blink, setBlink, position, counter}) {
+    // useEffect(()=>{
+    //     if ()
+    // }, [position])
     let alpha = ['A','B','C','D','E','F','G','H'];
     let morseStrY = morse[alpha[position[1]]];
     console.log("morseY",morseStrY);
@@ -39,6 +42,9 @@ function Instruction({blink, setBlink, position}) {
         <>
         <StyledInstruction>
             <button onClick={secondLetter} >Get Signal</button>
+            {Array(counter).fill().map((value, index)=>(
+                <img src={heart} alt="heart1" key={index} />
+            ))}
         </StyledInstruction>
         <StyledMorseCode>
         </StyledMorseCode>
