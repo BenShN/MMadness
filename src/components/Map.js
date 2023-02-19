@@ -22,7 +22,7 @@ const Map = () => {
   for(let row = 0; row < w; row++) {
     grid.push([]);
     for(let col = 0; col < h; col++) {
-      let componentToRender = <MapPiece key={col * w + row} /> ;
+      let componentToRender = <MapPiece x={col} y={row} key={col * w + row} /> ;
 
       pieces.forEach(piece => {
         if(piece.x == col && piece.y == row) {
