@@ -14,8 +14,8 @@ export const StyledMapPiece = styled.div`
   aspect-ratio: 1/1;
   button {
     padding: 0;
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: none;
     &:hover {
