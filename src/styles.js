@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import spark from './imageSrc/spark.png'
+import spark from './ImageSrc/spark.png'
 
 export const StyledMap = styled.div`
   display: flex;
