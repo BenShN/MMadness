@@ -5,7 +5,7 @@ border-style: content-box;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1/1;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(https://cdn.discordapp.com/attachments/1076560020449263622/1076709526176276552/map.jpg);
