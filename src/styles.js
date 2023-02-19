@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import spark from './imageSrc/spark.png'
 
 export const StyledMap = styled.div`
   display: flex;
@@ -30,6 +31,7 @@ export const StyledBlinkingText = styled.div.attrs(props=>({
 }))`
   .blinking-text {
     animation: blink ${props => props.blinkDuration}s infinite;
+    background-image: url(${spark});
   }
 
   @keyframes blink {
