@@ -1,6 +1,7 @@
 
 .App {
   display: flex;
+}
 * {
   border-style: border-box;
 }

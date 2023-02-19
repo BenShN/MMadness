@@ -2,6 +2,8 @@ import MapPiece from "./MapPiece";
 import DestinationPiece from "./DestinationPiece";
 import PlayerPiece from "./PlayerPiece.js"
 import { StyledMap } from '../styles';
+import { useState } from "react";
+
 
 const Map = () => {
  
