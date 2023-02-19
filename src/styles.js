@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import spark from './imageSrc/spark.png'
+import spark from './ImageSrc/spark.png';
 
 export const StyledMap = styled.div`
   display: flex;
@@ -26,17 +26,50 @@ export const StyledMapPiece = styled.div`
 `;
 
 
-export const StyledBlinkingText = styled.div.attrs(props=>({
-  blinkDuration: props.blink
-}))`
-  .blinking-text {
-    animation: blink ${props => props.blinkDuration}s infinite;
-    background-image: url(${spark});
-  }
+// export const StyledBlinkingText = styled.div.attrs(props=>({
+//   blinkDuration: props.blink
+// }))` 
+//   animation: blink 1s;
+//   background-color: rgba(255, 0, 0, 0.5);
+//   background-image: url(${spark});
+//   height: 100px;
+//   @keyframes blink {
+//     0% {
+//       opacity: 0;
+//     }
+//     10% {
+//       opacity: 1;
+//     }
+//     90% {
+//       opacity: 1;
+//     }
+//     100% {
+//       opacity: 0;
+//     }
+//   }
+// `;
 
+export const StyledBlinking1s = styled.div`
+  animation: blink 1s;
+  background-color: rgba(255, 0, 0, 0.5);
+  background-image: url(${spark});
+  height: 100px;
   @keyframes blink {
-    5% {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
       opacity: 0;
     }
   }
+`;
+
+export const StyledBlinking3s = styled(StyledBlinking1s)`
+  animation: blink 2s;
 `;
