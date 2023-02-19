@@ -10,7 +10,7 @@ const Map = () => {
 
   const [pieces, setPieces] = useState([
     {
-      component: <PlayerPiece />,
+      component: <PlayerPiece key={"player"} />,
       name: "player",
       x: 1,
       y: 0
@@ -19,10 +19,24 @@ const Map = () => {
 
   const grid = [];
 
+  function movePlayer(e, x, y) {
+    e.preventDefault();
+    const pieceIndex = pieces.findIndex(piece => {
+      return piece.name === "player";
+    })
+    setPieces(prevPieces => {
+      const newPieces = [...prevPieces];
+      newPieces[pieceIndex].x = x;
+      newPieces[pieceIndex].y = y;
+      return newPieces
+    });
+
+  }
+
   for(let row = 0; row < w; row++) {
     grid.push([]);
     for(let col = 0; col < h; col++) {
-      let componentToRender = <MapPiece x={col} y={row} key={col * w + row} /> ;
+      let componentToRender = <MapPiece btnPress={movePlayer} x={col} y={row} key={col * w + row} /> ;
 
       pieces.forEach(piece => {
         if(piece.x == col && piece.y == row) {
@@ -38,10 +52,6 @@ const Map = () => {
       {grid}
     </StyledMap>
   )
-}
-
-function renderPiece(pieces) {
-
 }
 
 export default Map;
