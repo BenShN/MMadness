@@ -20,7 +20,8 @@ https://github.com/BenShN/MMadness
 
 ## Group members names, SFU Computing ID & email
 - Ben Shires Nakamura / bks5, bks5@sfu.ca
--
+- Gurseerat Singh Brar / gsb15, gsb15@sfu.ca
+- Gabriel cinco / gac9, gac9@sfu.ca 
 - Shinyoung You / austyn.you@gmail.com
 - Honey Lee / haneylee99@gmail.com
 
