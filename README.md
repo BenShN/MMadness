@@ -17,6 +17,12 @@ A man named Morris have lost in the snow mountain. He found a watch tower that s
 
 https://mountainmadness2023-mourse.web.app/
 
+## How to play
+
+1. push 'get signal' button to get light signal
+2. decipher morse signal (the position code consisted of one alphabet(A-H) and one number(1-8))
+3. click the right position on the map 
+
 
 ## video
 
